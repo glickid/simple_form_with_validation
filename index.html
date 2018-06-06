@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="headline">
+      <h2>Site Registration</h2>
+    </div>
+  <div class="container">
+    <form id="registrationForm">
+      <div class="row clearfix">
+        <div class="col-25">
+          <label for="name">Name:</label>
+        </div>
+        <div class="col-75">
+          <input required type="text" id="name" name="name" placeholder="Full Name">
+        </div>
+        <div class="col-25">
+          <label for="email">E-Mail:</label>
+        </div>
+        <div class="col-75">
+          <input onfocus="validateNameLegth()" required type="email" id="email" name="email" placeholder="mail@mailserver.com">
+        </div>
+        <div class="col-25">
+          <label for="password">Password:</label>
+        </div>
+        <div class="col-75">
+          <input onfocus="ValidateEmail()" required type=password id="password" name="password" placeholder="password">
+        </div>
+        <div class="col-25">
+          <label for="password">Re-enter Password:</label>
+        </div>
+        <div class="col-75">
+          <input onfocus="CheckPassword()" required type=password id="password2" name="password2" placeholder="re-enter password">
+        </div>
+      </div>
+    
+      <div class="row clearfix">
+        <div class="col-25 ">
+          <label for="age">Age:</label>
+        </div>
+        <div class="col-75">
+          <input onfocus="CheckPasswordMatch()" required type="Number" id="age" name="age" min="18" max="99">
+        </div>
+        <div class="col-25">
+          <label for="mstatus">Marital Status</label>
+        </div>
+        <div class="col-75">
+            <input required list="mstatuses" id="mstatus" name="mstatus" />
+            <datalist id="mstatuses">
+              <option value="Single">
+              <option value="Married">
+              <option value="Divorced">
+              <option value="Widower">
+            </datalist>
+        </div>
+        <div class="col-25">
+          <label for="hobbies">Hobbies:</label>
+        </div>
+        <div class="col-75-right">
+          <input id="biking" type="checkbox" name="hobbie1" value="">
+          <label for="biking">biking</label>
+        </div>
+        <div class="col-75-right alignCenter">
+          <input id="Pets" type="checkbox" name="hobbie1" value="Pets">
+           <label for="Pets">Pets</label>
+        </div>
+        <div class="col-75-right alignCenter">
+          <input id="Drawing" type="checkbox" name="hobbie1" value="Drawing">
+           <label for="Drawing">Drawing</label>
+        </div>
+        <div class="col-75-right alignCenter">
+          <input id="Cooking" type="checkbox" name="hobbie1" value="Cooking">
+          <label for="Cooking">Cooking</label>
+        </div>
+        <div class="col-75-right alignCenter">
+          <input id="Hiking" type="checkbox" name="hobbie1" value="Hiking">
+          <label for="Hiking">Hiking</label>
+        </div>
+        <div class="col-75-right alignCenter">
+          <input id="Shopping" type="checkbox" name="hobbie1" value="Shopping">
+          <label for="Shopping">Shopping</label>
+        </div>
+        
+        <div class="col-75">
+          <input type="hidden" id="refferer" name="refferer" value="W24LCH">
+        </div>
+      </div> <!-- row -->
+      
+      <div class="row clearfix">
+        <div class="col-25">
+          <label for="fileToUpload">Select image:</label>
+        </div>
+        <div class="col-75-right">
+          <input required type="file" name="fileToUpload" id="fileToUpload">
+        </div>
+        <div class="col-25">
+          <label for="selfDescribe">Describe yourself: (100 charachters max)</label>
+        </div>
+        <div class="col-75">
+          <textarea onkeypress="checkDescription()" id="selfDescribe" maxlength="100" rows="4" cols="40" placeholder="Tell us about yourself"></textarea>
+        </div>
+      </div>
+
+      <div class="row clearfix">
+        <input id="submitButton" type="submit" value="Submit">
+        <input id="submitButton" type="button" onclick="myFunction()" value="Reset form">
+      </div>
+  </form>
+</div> <!-- container -->
+  </body>
+</html>
