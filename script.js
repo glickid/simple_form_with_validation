@@ -4,6 +4,7 @@ function myFunction() {
     document.getElementById("registrationForm").reset();
 }
 
+
 function validateNameLegth()
 {
     var name = document.getElementById("name");
